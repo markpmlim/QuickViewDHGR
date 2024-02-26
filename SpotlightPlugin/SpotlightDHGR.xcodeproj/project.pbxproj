@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C05A19C06CAA52B00D84F6F /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */; };
+		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
+		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
+		C86B05270671AA6E00DD9006 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B05260671AA6E00DD9006 /* CoreServices.framework */; };
+		EE00E937205D15F1001C2824 /* Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00E8D8205D1416001C2824 /* Decoder.m */; };
+		EE00FB8A2050E15600823BEA /* Apple2Graphic.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FB842050E15600823BEA /* Apple2Graphic.m */; };
+		EE00FB8B2050E15600823BEA /* Apple2Graphic.h in Headers */ = {isa = PBXBuildFile; fileRef = EE00FB852050E15600823BEA /* Apple2Graphic.h */; };
+		EE3030BD2068774200D863C1 /* Apple2Graphic_DoubleHires.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3030B92068774200D863C1 /* Apple2Graphic_DoubleHires.h */; };
+		EE3030BE2068774200D863C1 /* Apple2Graphic_DoubleHires.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3030BA2068774200D863C1 /* Apple2Graphic_DoubleHires.m */; };
+		EE3030BF2068774200D863C1 /* Apple2Graphic_Hires.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3030BB2068774200D863C1 /* Apple2Graphic_Hires.h */; };
+		EE3030C02068774200D863C1 /* Apple2Graphic_Hires.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3030BC2068774200D863C1 /* Apple2Graphic_Hires.m */; };
+		EEE8A36C2046960800D86EA9 /* NSImage+Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE8A3682046960800D86EA9 /* NSImage+Conversion.h */; };
+		EEE8A36D2046960800D86EA9 /* NSImage+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE8A3692046960800D86EA9 /* NSImage+Conversion.m */; };
+		EEE8A36E2046960800D86EA9 /* UserDefines.c in Sources */ = {isa = PBXBuildFile; fileRef = EEE8A36A2046960800D86EA9 /* UserDefines.c */; };
+		EEE8A36F2046960800D86EA9 /* UserDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE8A36B2046960800D86EA9 /* UserDefines.h */; };
+		EEE8A382204696C600D86EA9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE8A381204696C600D86EA9 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08FB77B6FE84183AC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
+		8D576316048677EA00EA77CD /* SpotlightDHGR.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightDHGR.mdimporter; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C86B05260671AA6E00DD9006 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		C88FB7D7067446EC006EBB30 /* schema.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = schema.xml; sourceTree = "<group>"; };
+		C88FB7DB0674470F006EBB30 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/schema.strings; sourceTree = "<group>"; };
+		EE00E8D7205D1416001C2824 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		EE00E8D8205D1416001C2824 /* Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decoder.m; sourceTree = "<group>"; };
+		EE00FB842050E15600823BEA /* Apple2Graphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apple2Graphic.m; sourceTree = "<group>"; };
+		EE00FB852050E15600823BEA /* Apple2Graphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apple2Graphic.h; sourceTree = "<group>"; };
+		EE3030B92068774200D863C1 /* Apple2Graphic_DoubleHires.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apple2Graphic_DoubleHires.h; sourceTree = "<group>"; };
+		EE3030BA2068774200D863C1 /* Apple2Graphic_DoubleHires.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apple2Graphic_DoubleHires.m; sourceTree = "<group>"; };
+		EE3030BB2068774200D863C1 /* Apple2Graphic_Hires.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apple2Graphic_Hires.h; sourceTree = "<group>"; };
+		EE3030BC2068774200D863C1 /* Apple2Graphic_Hires.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apple2Graphic_Hires.m; sourceTree = "<group>"; };
+		EEE8A3682046960800D86EA9 /* NSImage+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Conversion.h"; sourceTree = "<group>"; };
+		EEE8A3692046960800D86EA9 /* NSImage+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Conversion.m"; sourceTree = "<group>"; };
+		EEE8A36A2046960800D86EA9 /* UserDefines.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UserDefines.c; sourceTree = "<group>"; };
+		EEE8A36B2046960800D86EA9 /* UserDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefines.h; sourceTree = "<group>"; };
+		EEE8A381204696C600D86EA9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D576313048677EA00EA77CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */,
+				C86B05270671AA6E00DD9006 /* CoreServices.framework in Frameworks */,
+				EEE8A382204696C600D86EA9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* SpotlightPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8A3722046962800D86EA9 /* Model */,
+				EEE8A3672046960800D86EA9 /* Support */,
+				08FB77AFFE84173DC02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+				EEE8A381204696C600D86EA9 /* Cocoa.framework */,
+			);
+			name = SpotlightPlugin;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C86B05260671AA6E00DD9006 /* CoreServices.framework */,
+				0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C88FB7E30674480E006EBB30 /* schema.strings */,
+				C88FB7D7067446EC006EBB30 /* schema.xml */,
+				8D576317048677EA00EA77CD /* Info.plist */,
+				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */,
+				08FB77B6FE84183AC02AAC07 /* main.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D576316048677EA00EA77CD /* SpotlightDHGR.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE8A3672046960800D86EA9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EE00E8D7205D1416001C2824 /* Decoder.h */,
+				EE00E8D8205D1416001C2824 /* Decoder.m */,
+				EEE8A3682046960800D86EA9 /* NSImage+Conversion.h */,
+				EEE8A3692046960800D86EA9 /* NSImage+Conversion.m */,
+				EEE8A36A2046960800D86EA9 /* UserDefines.c */,
+				EEE8A36B2046960800D86EA9 /* UserDefines.h */,
+			);
+			name = Support;
+			path = ../QuickViewDHGR/Support;
+			sourceTree = SOURCE_ROOT;
+		};
+		EEE8A3722046962800D86EA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FB852050E15600823BEA /* Apple2Graphic.h */,
+				EE00FB842050E15600823BEA /* Apple2Graphic.m */,
+				EE3030B92068774200D863C1 /* Apple2Graphic_DoubleHires.h */,
+				EE3030BA2068774200D863C1 /* Apple2Graphic_DoubleHires.m */,
+				EE3030BB2068774200D863C1 /* Apple2Graphic_Hires.h */,
+				EE3030BC2068774200D863C1 /* Apple2Graphic_Hires.m */,
+			);
+			name = Model;
+			path = ../QuickViewDHGR/Model;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D57630E048677EA00EA77CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE8A36C2046960800D86EA9 /* NSImage+Conversion.h in Headers */,
+				EEE8A36F2046960800D86EA9 /* UserDefines.h in Headers */,
+				EE00FB8B2050E15600823BEA /* Apple2Graphic.h in Headers */,
+				EE3030BD2068774200D863C1 /* Apple2Graphic_DoubleHires.h in Headers */,
+				EE3030BF2068774200D863C1 /* Apple2Graphic_Hires.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D57630D048677EA00EA77CD /* SpotlightDHGR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70138C840896BE9A00968C2F /* Build configuration list for PBXNativeTarget "SpotlightDHGR" */;
+			buildPhases = (
+				8D57630E048677EA00EA77CD /* Headers */,
+				8D57630F048677EA00EA77CD /* Resources */,
+				8D576311048677EA00EA77CD /* Sources */,
+				8D576313048677EA00EA77CD /* Frameworks */,
+				8D576315048677EA00EA77CD /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotlightDHGR;
+			productInstallPath = /Library/Spotlight;
+			productName = SpotlightPlugin;
+			productReference = 8D576316048677EA00EA77CD /* SpotlightDHGR.mdimporter */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 70138C880896BE9A00968C2F /* Build configuration list for PBXProject "SpotlightDHGR" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* SpotlightPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D57630D048677EA00EA77CD /* SpotlightDHGR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D57630F048677EA00EA77CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D576315048677EA00EA77CD /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D576311048677EA00EA77CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D576312048677EA00EA77CD /* main.c in Sources */,
+				2C05A19C06CAA52B00D84F6F /* GetMetadataForFile.m in Sources */,
+				EEE8A36D2046960800D86EA9 /* NSImage+Conversion.m in Sources */,
+				EE00E937205D15F1001C2824 /* Decoder.m in Sources */,
+				EEE8A36E2046960800D86EA9 /* UserDefines.c in Sources */,
+				EE00FB8A2050E15600823BEA /* Apple2Graphic.m in Sources */,
+				EE3030BE2068774200D863C1 /* Apple2Graphic_DoubleHires.m in Sources */,
+				EE3030C02068774200D863C1 /* Apple2Graphic_Hires.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C88FB7E30674480E006EBB30 /* schema.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C88FB7DB0674470F006EBB30 /* English */,
+			);
+			name = schema.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70138C850896BE9A00968C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Library/Spotlight;
+				PRODUCT_NAME = SpotlightDHGR;
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Debug;
+		};
+		70138C860896BE9A00968C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Library/Spotlight;
+				PRODUCT_NAME = SpotlightDHGR;
+				VALID_ARCHS = "i386 ppc x86_64";
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Release;
+		};
+		70138C890896BE9A00968C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		70138C8A0896BE9A00968C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70138C840896BE9A00968C2F /* Build configuration list for PBXNativeTarget "SpotlightDHGR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70138C850896BE9A00968C2F /* Debug */,
+				70138C860896BE9A00968C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70138C880896BE9A00968C2F /* Build configuration list for PBXProject "SpotlightDHGR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70138C890896BE9A00968C2F /* Debug */,
+				70138C8A0896BE9A00968C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

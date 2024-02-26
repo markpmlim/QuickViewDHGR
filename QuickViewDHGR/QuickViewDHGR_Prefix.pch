@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'QuickViewDHGR' target in the 'QuickViewDHGR' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

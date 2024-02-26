@@ -1,0 +1,527 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\vieww18480\viewh19800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 ======================= Resize Window with this line as a guide =============================\
+
+\b Introduction
+\b0 \
+\
+The program 
+\b QuickViewDHGR
+\b0  and its QuickLook plugin can decode and display the following Apple II graphic files:\
+\
+	Apple2 Graphic Type					File Extension\
+1	Apple ][ Full Color Graphics			 		A2FC\
+2	Apple // Full Double Hires Graphics				DGHR\
+3	Apple ][ Hires Graphics						HGR\
+\
+The file size, its ProDOS file and auxiliary types are used to identify the graphic initially. In order for the application to display the graphic correctly, it will peek at file offset +120 ($0078) to generate the Mac OS X image object. Given below is a table lifted from Apple II FileType Note $08/$0000-$3FFF:\
+\
+ Mode					Page 1    Page 2\
+280 x 192 Black & White		   0		4\
+280 x 192 Limited Color		   1		5\
+560 x 192 Black & White		   2		6\
+140 x 192 Full Color		   3		7\
+\
+The user can use a Hex Editor to patch an Apple II graphic file with a value of 0 - 7 at file offset +120.\
+\
+
+\b QuickViewDHGR
+\b0  instantiates 4 Mac OS X image objects: 2 coloured and 2 black-and-white images. The coloured images are at 1x (280x192) or 2x (560x384) magnification. Similarly, with the monochrome images.\
+\
+On launching the application\'92s default modes are: color and 1x magnification (fig. 1)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Fig1.png \width8760 \height8440
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 1
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+Since Apple II Graphic images are relatively small, the user might want to click on the check box to display an enlarged image.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Fig2.png \width14260 \height12200
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 2
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+A click on the 
+\b Mono
+\b0  should present the graphic as a monochrome (Fig. 3)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic fig3.png \width13220 \height11200
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 3
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+The following options are available in 
+\b QuickViewDHGR
+\b0 .\
+\
+
+\b Option 1
+\b0 : Displaying an Apple II graphic file.\
+\
+1a) Drag-and-Drop:\
+\
+On launching the program there is a single drop window with its content area labelled as "
+\b Drop-Display Area
+\b0 ". The user may click on an Apple II graphic file from the Mac OS X desktop, drag and drop it onto this area. If the file is identified correctly, then it will be converted to an instance of NSImage and displayed.\
+\
+Inter-application drag-and-drops are supported. For example, 
+\b QuickViewDHGR 
+\b0 can accept drags and drops from disk images opened with 
+\b CiderXPress
+\b0  and archives opened with 
+\b NuShrinkItX
+\b0 . First, the file must be extracted  from its archive and copied to a temporary folder on the user's hard disk before being decoded and displayed. 
+\b QuickViewDHGR
+\b0  uses a short time delay of 0.05 sec to allow the program providing the graphic file to perform these 2 operations. The file must exists within the temporary folder designated by 
+\b QuickViewDHGR
+\b0  or the display area of the window would not change. The user may need to drag-and-drop the file again. The graphic will be displayed after the 
+\b QuickViewDHGR
+\b0  has successfully validated the graphic type of the copied file.\
+\
+In fact, any application that implements drags-and-drops to 
+\b Finder
+\b0  would automatically support this feature. The caveat is the user must set the file's ProDOS file and auxiliary type values as an extended attribute named "com.apple.FinderInfo".  In addition,  for a BW or color image to be generated the file must be patched at offset +120 with the correct value as mentioned in the 
+\b Introduction
+\b0  section.\
+\
+BTW, the application does support drag-and-drop of foreign files which does not have the file suffix or ProDOS file and auxiliary types. For such files, 
+\b QuickViewDHGR 
+\b0 will use their file sizes to determine if it's a double-hires or standard hires AppleII graphic.  The caveat is the generated image may not be correct. Patching the file at file offset +120 can solve this. \
+\
+Note: Option 1b) and 1c) requires the file extension to be correct. This is the only way Mac OS X could identify which application(s) is/are associated with a particular document type and launch it. \
+\
+1b) Open via a double-click\
+\
+Mac OS X will use the document's file extension to locate 
+\b QuickViewDHGR
+\b0  and launch it (if it's not already running). Documents whose file extensions are listed in the table above (Introduction Section) can be opened and displayed by 
+\b QuickViewDHGR
+\b0  using this procedure. The wrong application can be launched if If there are conflicts. The user will have to resolve them e.g. using Finder's the Get File Info panel.\
+\
+1c) Open using Finder's Context Menu\
+\
+The user can select an Apple II graphic with a control-click then choose either the "
+\b Open
+\b0 " or "
+\b Open With
+\b0 " menu item. The user can use the  "
+\b Open With
+\b0 " menu item to select an application from a list. He/she can choose the last item "
+\b Other\'85
+\b0 " to change the default application.\
+\
+The following UTIs (Uniform Type Identifiers) and file extensions are listed in the table below\
+\
+File Extension		UTI						Description (under 
+\i Kind
+\i0  column of Finder Window)\
+a2fc				appleii.color.graphics		Apple ][ Color Graphic\
+dhgr				appleii.doublehires.graphics	Apple // Double Hi-Res Graphic\
+hgr				appleii.hires.graphics		Apple ][ Hires Graphic\
+\
+The files with a suffix of A2FC can be Apple ][ Hires or Apple // Double Hi-Res graphics.\
+\
+\
+
+\b Switching modes
+\b0 \
+\
+This utility allows switching between size and color modes.\
+\
+The display of a colored and monochrome image is controlled by the \'93
+\b Color/Mono
+\b0 \'94 tab .\
+\
+Clicking on the check box labelled \'93
+\b Double-sized Image
+\b0 \'94 will toggle between a normal-sized (280x192) and double-sized (560x384) display of the Mac OS X generated graphic object.\
+\
+
+\b File Type Notes
+\b0 \
+\
+The expected file sizes for 
+\b HGR
+\b0  and 
+\b DHR
+\b0  graphics are 8184-8192 and 16376-16384 (inclusive) respectively.\
+\
+Given below is a brief description of the identification procedure of files.\
+\
+To be as flexible as possible to the user, file suffixes will not be checked. On the other hand, in order for this utility to avoid inflating compressed files more than once, certain recommendations are made.\
+\
+
+\b A
+\b0 ) The file has no FinderInfo metadata; the file size is checked against the expected file sizes for 
+\b HGR
+\b0  and 
+\b DHR
+\b0  graphics. If its size is not valid, then 
+\b QuickViewDHGR
+\b0  will attempt to decompress the file and check its original size against the expected sizes.\
+\
+
+\b B
+\b0 ) The file has FinderInfo metadata. Only files with 2 
+\b ProDOS
+\b0  file types are accepted viz. 
+\b FOT
+\b0 ($08) and 
+\b BIN
+\b0 ($06).\
+\
+
+\b 1
+\b0 ) The following are the expected auxiliary types of 
+\b FOT
+\b0  files.\
+\
+Aux Type                    Expected File Contents\
+$0000-$3FFF   Uncompressed 
+\b HGR
+\b0  and 
+\b DHR
+\b0  data\
+$4000,$4001    
+\b HGR
+\b0  and 
+\b DHR
+\b0  file data compressed with 
+\b PackBytes
+\b0  algorithm\
+$8005,$8006    
+\b HGR
+\b0  and 
+\b DHR
+\b0  file data compressed with 
+\b LZ4
+\b0  algorithm\
+$8066		
+\b HGR
+\b0  file data compressed with Andy Fadden's 
+\b LZ4-based
+\b0  algorithm\
+\
+
+\b 2
+\b0 ) For 
+\b BIN
+\b0 ary files, the auxiliary types do not matter and therefore are ignored.\
+If the file size does not match the expected file sizes for uncompressed 
+\b HGR
+\b0  and 
+\b DHR
+\b0  graphics, the utility will attempt to decompress the file and check the size of the returned data block against the expected sizes.\
+\
+
+\b B1
+\b0  is recommended because the program will only call the decompressors (one after another) once when the program is in the process of instantiating a Mac OS X image object.\
+\
+\
+
+\b Slideshow
+\b0 \
+\
+The user may wish to preview his collection of Apple II graphics using 
+\b QuickViewDHGR's
+\b0  slideshow feature. This option is under the 
+\b View
+\b0  menu.\
+\
+On selecting the menu item "
+\b Slide Show
+\b0 ",  a window labelled "
+\i HGR SlideShow
+\i0 " will appear (fig 4).\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Fig4.png \width8080 \height8060
+}¬}
+\fs32 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 4
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+There are some controls under the display area of the Slideshow window.\
+a) A slider to set the time interval between slides.\
+b) A segmented control to manage the preview of the slides. \
+c) A button to bring up an Open Panel for selecting one or more Apple II Graphic files for presentation.\
+\
+The minimum duration to preview each slide is 0.25 sec and the maximum is 3.0 sec. A value of 0.0 indicates 0.25 sec.\
+To preview the previous slide, click on left arrow part of the segmented control.\
+To preview the next slide, click on the right arrow part.\
+A click on the middle part will toggle between auto and manual previews. A timer is used to control an automatic preview of the slides.  The presentation of the slides will loop through the list of selected files.\
+\
+Note: when the time interval is changed, a timer (if running) will stop and a new timer will be started. As soon as the timer starts, the slideshow will be in automatic preview mode.\
+\
+During a slide show there are two built-in slides that the user should be aware of.\
+a) a black slide, and\
+b) a "noise" slide\
+\
+When the user sees either of these slides, it means 
+\b QuickViewDHGR's
+\b0  could not instantiate a Mac OS X image object from a file's data.\
+\
+Slides of type (a) will be displayed if the file/aux type of the Apple II graphic is wrongly assigned. As an example, a graphic was compressed with the LZ4 algorithm but assigned FOT/$8005.\
+\
+Slides of type (b) will be displayed if the file is not an Apple II graphic.\
+\
+\
+
+\b ProDOS File Type Changer
+\b0 \
+\
+This utility can add/change the 
+\b ProDOS
+\b0  file and auxiliary types of Apple II Graphic files to those mentioned in 
+\i File Type Notes 
+\i0 Section of this document. \
+\
+There is also an option to add/change the selected file(s) 
+\b PRODOS 
+\b0 file type to 
+\b BIN
+\b0  when the Open Panel is brought via the menu item "
+\b Change File Type\'85
+\b0 " under the 
+\b File
+\b0  Menu.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Fig5.png \width15760 \height13100
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 5\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 \
+QuickLook plugin
+\b0 \
+\
+This QuickLook plugin (named 
+\b QuickLookDHGR
+\b0 ) is embedded in the application's bundle; it works on the basis of suffixes. The plugin is called with the document's file extension as one of the parameters. (Refer to the table at the beginning of this document.) As long as the plugin can identify an Apple II graphic file correctly, it will be displayed. Just add/rename the suffix of an AppleII graphic file on the Mac OS X desktop and watch the plugin change from a plain generic icon into a bw/color icon.  Patching the file is mandatory if the correct (bw/color) image is to be displayed either as a thumbnail or in a Preview Window.\
+\
+\
+Tips on getting the QuickLook plugin to run:\
+\
+The conditions may vary but basically typing the 3 following commands in succession at a Console/Terminal window should help getting a QL plugin to provide previews and to generate icons.\
+\
+qlmanage -r\
+qlmanage -r cache\
+qlmanage -m\
+\
+It's advisable for the user to run 
+\b QuickViewDHGR
+\b0  first before typing the 3 commands. After that, use the Terminal's cmd+F to check the link to the QL plugin. Search for the word "
+\b QuickViewDHGR
+\b0 " or just "
+\b DHGR
+\b0 "\
+\
+Once the link is correct, the QL plugin should generate a preview on request.\
+\
+\
+I will describe some likely scenarios on how to get 
+\b QuickLookDHGR
+\b0  to work.\
+\
+A) The user has received 
+\b QuickViewDHGR
+\b0  for the first time. This situation is the easiest to deal with.\
+\
+First he/she must mount the DMG and open it. \
+\
+The user can either run the application from the DMG or drag a copy to the desktop and run from there. If the latter case is chosen, it's advisable to unmount the DMG first before continuing to the next step. If he/she is going to run it from the DMG, then the disk image must remain mounted.\
+\
+Double-click on the DMG to run  
+\b QuickViewDHGR
+\b0  .\
+\
+Open a 
+\b Terminal
+\b0  Window, type the 3 commands mentioned above and check the link.\
+\
+\
+B) The user has received an update of 
+\b QuickViewDHGR
+\b0  in a DMG and he/she has an older copy of the application on the desktop. Drag that older copy to the 
+\b Trash Can
+\b0  and 
+\b EMPTY
+\b0  it. That will break the link. QL plugins can still run from the 
+\b Trash Can
+\b0  which is just a folder. Then follow the procedure described in scenario A.\
+\
+C) An older version of 
+\b QuickViewDHGR
+\b0  is not on the user's desktop or sub-folders but within another DMG. Just make sure that DMG is not mounted. Then follow the procedure described in scenario A.\
+\
+\
+
+\b Spotlight plugin
+\b0 \
+\
+This plugin generates metadata information for documents with the following UTIs (uniform type identifiers) :"
+\b apple.color.graphics
+\b0 ", "
+\b apple.hires.graphics
+\b0 ", and "
+\b apple.doublehires.graphics
+\b0 ". The generated information can be displayed as well as use for a search with Mac OS X's Spotlight.\
+\
+To view the generated information, do a contextual menu click on a document which is an Apple II graphic and select "
+\b Get Info
+\b0 ". When Finder's 
+\b Info Panel
+\b0  is displayed, look at the section named "
+\b More Info
+\b0 ". Click on the disclosure triangle if necessary. The graphic's dimensions and compression method used are displayed.\
+\
+To conduct a search, open a folder with lots of Apple II graphic files.\
+\
+Type "
+\b 140
+\b0 " to show all files which are 140 x 192, "
+\b 280
+\b0 " for 280 x 192 and "
+\b 560
+\b0 " for 560 x 192 Apple II graphics.\
+\
+\
+Tips on getting the Spotlight plugin produce information 
+\i quickly
+\i0 :\
+Normally, indexing with a new Spotlight plugin will not occur immediately. The procedure to get the Spotlight plugin working is similar to that described in the QuickLook tips section above.\
+\
+The commands to be issued at the command prompt are different.\
+\
+Type\
+\
+mdimport -L\
+\
+followed by a search for the word "SpotlightSHR" or "SHR" to check the link is correct.\
+\
+Then cd to the folder that has a number of AppleII graphics e.g.\
+\
+cd /Users/user_name/Desktop/II_GRAPHICS\
+\
+Finally, type\
+\
+mdimport -d2 *.*\
+\
+The user may use -d1 but the generated metadata will be not be shown on the 
+\b Terminal
+\b0  Window.\
+\
+After this, you can navigate using Finder to the folder "II_GRAPHICS" and conduct a search. (See above.)\
+\
+\
+
+\b Technical details
+\b0 :\
+\
+
+\b QuickViewDHGR
+\b0  work on the basis of HFSTypeCode and HFSCreatorCode codes as well as file extensions. If the user performs a drag-and-drop, then 
+\b QuickViewDHGR
+\b0  check if the file is a ProDOS file. If it is a foreign file (e.g. downloaded from the Internet), it validates the size of the file and uses that value to create a MacOSX image object. The user should try to patch the file if the image displayed is unexpected.\
+\
+If the file is a ProDOS file, 
+\b QuickViewDHGR
+\b0  will extract the file and auxiliary type codes and validate their values are $08 (FOT) and $0000-$3FFF respectively. Apple II graphic files compressed with an Apple IIGS Misc. toolset PackBytes compatible function is supported. Such files have the ProDOS file and auxiliary types of $08/$4000 and $08/$4001. For testing purposes PackBytes compressed files are given the file extension PAK.\
+\
+The program also supports Apple II graphic files compressed using the LZ4 algorithm. Currently the 
+\b QuickViewDHGR 's 
+\b0 decoder expect the following 16-byte header which is cross platform.\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf0 offset 0:  always these bytes: 03 21 4C 18\
+offset  4: graphic size little endian\
+offset  8:  ignore; unknown\
+offset  12:  compressed data size little endian\
+offset  16:  compressed data up to  "compressed data size" number of bytes\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx10060\pardirnatural\partightenfactor0
+\cf0 For testing purposes, the LZ4 compressed files are given 2 ProDOS file/aux pairs: $08/$8000 for HiRes and $08/$8001 for Double HiRes. The suffix used for such files is LZ4.\
+\
+If the file type is $06 (BIN), then the file length is checked. Only uncompressed Apple II graphic files will be accepted by 
+\b QuickViewDHGR
+\b0 .\
+\
+In all cases, patching will be required if the displayed image (or thumbnail) conform to expectations e.g. the user expects to see a color image instead of a black and white one and vice-versa.\
+\
+If the user 
+\b opens
+\b0  the document by doing a 
+\b double-click
+\b0 , or via Finder's 
+\b contextual menu
+\b0  or 
+\b File Menu
+\b0 , 
+\b QuickViewDHGR
+\b0  will attempt to identify the document's Apple II graphic type based on what is mentioned above.\
+\
+Sometimes the user might want to remove the FinderInfo metadata from a file. As there might be no utility out there that can perform this task, given below are a step by step procedure that will delete this metadata from a file.\
+\
+a) Launch Terminal.app\
+b) cd to the folder that contains the target file. We assume the file's name is PIC1.PAK.\
+c) ls -l@ PIC1.PAK. If there is FinderInfo metadata then the line\
+		com.apple.FinderInfo	  32\
+will be displayed.\
+d) To erase the metadata\
+	xattr -d com.apple.FinderInfo PIC1.PAK\
+e) You can verify the metadata had been removed by doing\
+	ls -l@ PIC1.PAK\
+\
+f) To 
+\i recursively
+\i0  delete all FinderInfo metadata from all files within a folder:\
+	xattr -rd com.apple.FinderInfo  /Path/to/folder\
+\
+  For example\
+\
+	xattr -rd com.apple.FinderInfo  ./\
+\
+	will remove the FinderInfo metadata from all files including those in sub-folders.\
+\
+\
+Technically, all the 4 Mac OS X (NSImage) graphic images are instantiated from two 560x384 Core Graphics Image objects, one coloured and the other black-and-white. For display purposes 2 coloured NSImage objects are created at 280x192 and 560x384 resolutions from the coloured Core Graphic objects. Similarly, for the monochrome objects.}

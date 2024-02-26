@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		EE00E94A205D1606001C2824 /* Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00E8EF205D147F001C2824 /* Decoder.m */; };
+		EE00FB302050DED600823BEA /* Apple2Graphic.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FB2D2050DED600823BEA /* Apple2Graphic.m */; };
+		EE212D97206C50B60053AB57 /* SlideshowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE212D96206C50B60053AB57 /* SlideshowView.m */; };
+		EE41F3AB204386390078B804 /* UserDefines.c in Sources */ = {isa = PBXBuildFile; fileRef = EE41F3AA204386390078B804 /* UserDefines.c */; };
+		EE41F5F62043911F0078B804 /* SpotlightDHGR.mdimporter in Copy Spotlight Plugin */ = {isa = PBXBuildFile; fileRef = EEEE5C3E20400F220020337A /* SpotlightDHGR.mdimporter */; };
+		EE41F5F7204391260078B804 /* QuickLookDHGR.qlgenerator in Copy QuickLook Plugin */ = {isa = PBXBuildFile; fileRef = EEEE5C2020400F000020337A /* QuickLookDHGR.qlgenerator */; };
+		EE45359E2067CFDD007608B2 /* Apple2Graphic_DoubleHires.m in Sources */ = {isa = PBXBuildFile; fileRef = EE45359C2067CFDD007608B2 /* Apple2Graphic_DoubleHires.m */; };
+		EE45359F2067CFDD007608B2 /* Apple2Graphic_Hires.m in Sources */ = {isa = PBXBuildFile; fileRef = EE45359D2067CFDD007608B2 /* Apple2Graphic_Hires.m */; };
+		EE4D5CA2205B288E002B5065 /* DropImage2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4D5CA0205B288E002B5065 /* DropImage2x.png */; };
+		EE533DF5206C67C7000002EB /* SlideshowWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE533DF4206C67C7000002EB /* SlideshowWindowController.m */; };
+		EE92F05E207798AC006F69B5 /* NoPic.png in Resources */ = {isa = PBXBuildFile; fileRef = EE92F05C207798AC006F69B5 /* NoPic.png */; };
+		EE93A3E72042E1120027D0B7 /* NSImage+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = EE93A3E62042E1120027D0B7 /* NSImage+Conversion.m */; };
+		EECC0FF82B5FE6AA00C4C0B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC0FF72B5FE6AA00C4C0B3 /* main.m */; };
+		EEE36677204106B100B3B221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE36674204106B100B3B221 /* AppDelegate.m */; };
+		EEE36678204106B100B3B221 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE36676204106B100B3B221 /* MainWindowController.m */; };
+		EEE449B3206C8912001EE963 /* OpenFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE449B1206C8912001EE963 /* OpenFolder.png */; };
+		EEEC0A32206E22CF003390EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEC0A31206E22CF003390EC /* QuartzCore.framework */; };
+		EEED07AD2057BC12003F00A9 /* QVTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEED07AC2057BC12003F00A9 /* QVTabView.m */; };
+		EEEE5C722040152A0020337A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEE5C702040152A0020337A /* MainWindow.xib */; };
+		EEEED084206BB81900A93BAA /* SlideshowWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEED082206BB81900A93BAA /* SlideshowWindow.xib */; };
+		EEEF3FFF205FAD7E00B7AE90 /* QuickViewDHGR.icns in Resources */ = {isa = PBXBuildFile; fileRef = EEEF3FFD205FAD7E00B7AE90 /* QuickViewDHGR.icns */; };
+		EEF124EB2B703A5E0020E58F /* Readme.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = EEF124E92B703A5E0020E58F /* Readme.rtfd */; };
+		EEFBC00B2055FBE70071E684 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EEFBC0082055FBE70071E684 /* Credits.rtf */; };
+		EEFF906B2054924A00E00C26 /* DropImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFF90692054924A00E00C26 /* DropImage.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE41F5C82043903D0078B804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA7E88C2032A28B00C28DF5 /* QuickLookDHGR.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
+			remoteInfo = QuickLookDHGR;
+		};
+		EE41F5CA2043903D0078B804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA7E8952032A29C00C28DF5 /* SpotlightDHGR.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
+			remoteInfo = SpotlightDHGR;
+		};
+		EEEE5C1F20400F000020337A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA7E88C2032A28B00C28DF5 /* QuickLookDHGR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = QuickLookDHGR;
+		};
+		EEEE5C3D20400F220020337A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA7E8952032A29C00C28DF5 /* SpotlightDHGR.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = SpotlightDHGR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE41F5F2204390E70078B804 /* Copy QuickLook Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/QuickLook;
+			dstSubfolderSpec = 1;
+			files = (
+				EE41F5F7204391260078B804 /* QuickLookDHGR.qlgenerator in Copy QuickLook Plugin */,
+			);
+			name = "Copy QuickLook Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE41F5F52043911B0078B804 /* Copy Spotlight Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/Spotlight;
+			dstSubfolderSpec = 1;
+			files = (
+				EE41F5F62043911F0078B804 /* SpotlightDHGR.mdimporter in Copy Spotlight Plugin */,
+			);
+			name = "Copy Spotlight Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* QuickViewDHGR_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickViewDHGR_Prefix.pch; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* QuickViewDHGR-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuickViewDHGR-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* QuickViewDHGR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickViewDHGR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE00E8EE205D147F001C2824 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		EE00E8EF205D147F001C2824 /* Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decoder.m; sourceTree = "<group>"; };
+		EE00FB2D2050DED600823BEA /* Apple2Graphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Apple2Graphic.m; path = Model/Apple2Graphic.m; sourceTree = "<group>"; };
+		EE00FB2E2050DED600823BEA /* Apple2Graphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple2Graphic.h; path = Model/Apple2Graphic.h; sourceTree = "<group>"; };
+		EE212D95206C50B60053AB57 /* SlideshowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideshowView.h; path = Views/SlideshowView.h; sourceTree = "<group>"; };
+		EE212D96206C50B60053AB57 /* SlideshowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideshowView.m; path = Views/SlideshowView.m; sourceTree = "<group>"; };
+		EE41F34E204382AA0078B804 /* UserDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefines.h; sourceTree = "<group>"; };
+		EE41F3AA204386390078B804 /* UserDefines.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UserDefines.c; sourceTree = "<group>"; };
+		EE45359C2067CFDD007608B2 /* Apple2Graphic_DoubleHires.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Apple2Graphic_DoubleHires.m; path = Model/Apple2Graphic_DoubleHires.m; sourceTree = "<group>"; };
+		EE45359D2067CFDD007608B2 /* Apple2Graphic_Hires.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Apple2Graphic_Hires.m; path = Model/Apple2Graphic_Hires.m; sourceTree = "<group>"; };
+		EE4535BF2067D49C007608B2 /* Apple2Graphic_DoubleHires.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple2Graphic_DoubleHires.h; path = Model/Apple2Graphic_DoubleHires.h; sourceTree = "<group>"; };
+		EE4535C02067D49C007608B2 /* Apple2Graphic_Hires.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple2Graphic_Hires.h; path = Model/Apple2Graphic_Hires.h; sourceTree = "<group>"; };
+		EE4D5CA1205B288E002B5065 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/DropImage2x.png; sourceTree = "<group>"; };
+		EE533DF3206C67C7000002EB /* SlideshowWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideshowWindowController.h; path = Coordinators/SlideshowWindowController.h; sourceTree = "<group>"; };
+		EE533DF4206C67C7000002EB /* SlideshowWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlideshowWindowController.m; path = Coordinators/SlideshowWindowController.m; sourceTree = "<group>"; };
+		EE92F05D207798AC006F69B5 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/NoPic.png; sourceTree = "<group>"; };
+		EE93A3E52042E1120027D0B7 /* NSImage+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Conversion.h"; sourceTree = "<group>"; };
+		EE93A3E62042E1120027D0B7 /* NSImage+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Conversion.m"; sourceTree = "<group>"; };
+		EEA7E88C2032A28B00C28DF5 /* QuickLookDHGR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickLookDHGR.xcodeproj; path = ../QuickLookPlugin/QuickLookDHGR.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EEA7E8952032A29C00C28DF5 /* SpotlightDHGR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpotlightDHGR.xcodeproj; path = ../SpotlightPlugin/SpotlightDHGR.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EECC0FF72B5FE6AA00C4C0B3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Support/main.m; sourceTree = "<group>"; };
+		EECF9E762B6CA0FB00CB95FC /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		EEE36673204106B100B3B221 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Coordinators/AppDelegate.h; sourceTree = "<group>"; };
+		EEE36674204106B100B3B221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Coordinators/AppDelegate.m; sourceTree = "<group>"; };
+		EEE36675204106B100B3B221 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowController.h; path = Coordinators/MainWindowController.h; sourceTree = "<group>"; };
+		EEE36676204106B100B3B221 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowController.m; path = Coordinators/MainWindowController.m; sourceTree = "<group>"; };
+		EEE449B2206C8912001EE963 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/OpenFolder.png; sourceTree = "<group>"; };
+		EEEC0A31206E22CF003390EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEED07AB2057BC12003F00A9 /* QVTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QVTabView.h; path = Views/QVTabView.h; sourceTree = "<group>"; };
+		EEED07AC2057BC12003F00A9 /* QVTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QVTabView.m; path = Views/QVTabView.m; sourceTree = "<group>"; };
+		EEEE5C712040152A0020337A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		EEEED083206BB81900A93BAA /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SlideshowWindow.xib; sourceTree = "<group>"; };
+		EEEF3FFE205FAD7E00B7AE90 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = English; path = English.lproj/QuickViewDHGR.icns; sourceTree = "<group>"; };
+		EEF124EA2B703A5E0020E58F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = English; path = English.lproj/Readme.rtfd; sourceTree = SOURCE_ROOT; };
+		EEFBC0092055FBE70071E684 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		EEFF906A2054924A00E00C26 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/DropImage.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				EEEC0A32206E22CF003390EC /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				EEE36673204106B100B3B221 /* AppDelegate.h */,
+				EEE36674204106B100B3B221 /* AppDelegate.m */,
+				EEE36675204106B100B3B221 /* MainWindowController.h */,
+				EEE36676204106B100B3B221 /* MainWindowController.m */,
+				EE533DF3206C67C7000002EB /* SlideshowWindowController.h */,
+				EE533DF4206C67C7000002EB /* SlideshowWindowController.m */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* QuickViewDHGR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* QuickViewDHGR */ = {
+			isa = PBXGroup;
+			children = (
+				EECF9E762B6CA0FB00CB95FC /* Readme.md */,
+				EEA7E88C2032A28B00C28DF5 /* QuickLookDHGR.xcodeproj */,
+				EEA7E8952032A29C00C28DF5 /* SpotlightDHGR.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Coordinators */,
+				EEE366712041068300B3B221 /* Model */,
+				EEE366722041068F00B3B221 /* Views */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				EE93A3E42042E1120027D0B7 /* Support */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = QuickViewDHGR;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EECC0FF72B5FE6AA00C4C0B3 /* main.m */,
+				256AC3F00F4B6AF500CF3369 /* QuickViewDHGR_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE92F05C207798AC006F69B5 /* NoPic.png */,
+				EEE449B1206C8912001EE963 /* OpenFolder.png */,
+				EE4D5CA0205B288E002B5065 /* DropImage2x.png */,
+				EEFF90692054924A00E00C26 /* DropImage.png */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				EEEE5C702040152A0020337A /* MainWindow.xib */,
+				EEEF3FFD205FAD7E00B7AE90 /* QuickViewDHGR.icns */,
+				8D1107310486CEB800E47090 /* QuickViewDHGR-Info.plist */,
+				EEEED082206BB81900A93BAA /* SlideshowWindow.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				EEEC0A31206E22CF003390EC /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE93A3E42042E1120027D0B7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EE00E8EE205D147F001C2824 /* Decoder.h */,
+				EE00E8EF205D147F001C2824 /* Decoder.m */,
+				EEF124E92B703A5E0020E58F /* Readme.rtfd */,
+				EEFBC0082055FBE70071E684 /* Credits.rtf */,
+				EE41F3AA204386390078B804 /* UserDefines.c */,
+				EE41F34E204382AA0078B804 /* UserDefines.h */,
+				EE93A3E52042E1120027D0B7 /* NSImage+Conversion.h */,
+				EE93A3E62042E1120027D0B7 /* NSImage+Conversion.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EEE366712041068300B3B221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FB2E2050DED600823BEA /* Apple2Graphic.h */,
+				EE00FB2D2050DED600823BEA /* Apple2Graphic.m */,
+				EE4535BF2067D49C007608B2 /* Apple2Graphic_DoubleHires.h */,
+				EE45359C2067CFDD007608B2 /* Apple2Graphic_DoubleHires.m */,
+				EE4535C02067D49C007608B2 /* Apple2Graphic_Hires.h */,
+				EE45359D2067CFDD007608B2 /* Apple2Graphic_Hires.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EEE366722041068F00B3B221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEED07AB2057BC12003F00A9 /* QVTabView.h */,
+				EEED07AC2057BC12003F00A9 /* QVTabView.m */,
+				EE212D95206C50B60053AB57 /* SlideshowView.h */,
+				EE212D96206C50B60053AB57 /* SlideshowView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EEEE5C1C20400F000020337A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE5C2020400F000020337A /* QuickLookDHGR.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEE5C3A20400F220020337A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE5C3E20400F220020337A /* SpotlightDHGR.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* QuickViewDHGR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QuickViewDHGR" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				EE41F5F2204390E70078B804 /* Copy QuickLook Plugin */,
+				EE41F5F52043911B0078B804 /* Copy Spotlight Plugin */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE41F5C92043903D0078B804 /* PBXTargetDependency */,
+				EE41F5CB2043903D0078B804 /* PBXTargetDependency */,
+			);
+			name = QuickViewDHGR;
+			productInstallPath = "$(HOME)/Applications";
+			productName = QuickViewDHGR;
+			productReference = 8D1107320486CEB800E47090 /* QuickViewDHGR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuickViewDHGR" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* QuickViewDHGR */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EEEE5C1C20400F000020337A /* Products */;
+					ProjectRef = EEA7E88C2032A28B00C28DF5 /* QuickLookDHGR.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEE5C3A20400F220020337A /* Products */;
+					ProjectRef = EEA7E8952032A29C00C28DF5 /* SpotlightDHGR.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* QuickViewDHGR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EEEE5C2020400F000020337A /* QuickLookDHGR.qlgenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QuickLookDHGR.qlgenerator;
+			remoteRef = EEEE5C1F20400F000020337A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEE5C3E20400F220020337A /* SpotlightDHGR.mdimporter */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SpotlightDHGR.mdimporter;
+			remoteRef = EEEE5C3D20400F220020337A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				EEEE5C722040152A0020337A /* MainWindow.xib in Resources */,
+				EEFF906B2054924A00E00C26 /* DropImage.png in Resources */,
+				EEFBC00B2055FBE70071E684 /* Credits.rtf in Resources */,
+				EE4D5CA2205B288E002B5065 /* DropImage2x.png in Resources */,
+				EEEF3FFF205FAD7E00B7AE90 /* QuickViewDHGR.icns in Resources */,
+				EEEED084206BB81900A93BAA /* SlideshowWindow.xib in Resources */,
+				EEE449B3206C8912001EE963 /* OpenFolder.png in Resources */,
+				EE92F05E207798AC006F69B5 /* NoPic.png in Resources */,
+				EEF124EB2B703A5E0020E58F /* Readme.rtfd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE36677204106B100B3B221 /* AppDelegate.m in Sources */,
+				EE00E94A205D1606001C2824 /* Decoder.m in Sources */,
+				EEE36678204106B100B3B221 /* MainWindowController.m in Sources */,
+				EE93A3E72042E1120027D0B7 /* NSImage+Conversion.m in Sources */,
+				EE41F3AB204386390078B804 /* UserDefines.c in Sources */,
+				EE00FB302050DED600823BEA /* Apple2Graphic.m in Sources */,
+				EEED07AD2057BC12003F00A9 /* QVTabView.m in Sources */,
+				EE45359E2067CFDD007608B2 /* Apple2Graphic_DoubleHires.m in Sources */,
+				EE45359F2067CFDD007608B2 /* Apple2Graphic_Hires.m in Sources */,
+				EE212D97206C50B60053AB57 /* SlideshowView.m in Sources */,
+				EE533DF5206C67C7000002EB /* SlideshowWindowController.m in Sources */,
+				EECC0FF82B5FE6AA00C4C0B3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE41F5C92043903D0078B804 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickLookDHGR;
+			targetProxy = EE41F5C82043903D0078B804 /* PBXContainerItemProxy */;
+		};
+		EE41F5CB2043903D0078B804 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpotlightDHGR;
+			targetProxy = EE41F5CA2043903D0078B804 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EE4D5CA0205B288E002B5065 /* DropImage2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4D5CA1205B288E002B5065 /* English */,
+			);
+			name = DropImage2x.png;
+			sourceTree = "<group>";
+		};
+		EE92F05C207798AC006F69B5 /* NoPic.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE92F05D207798AC006F69B5 /* English */,
+			);
+			name = NoPic.png;
+			sourceTree = "<group>";
+		};
+		EEE449B1206C8912001EE963 /* OpenFolder.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE449B2206C8912001EE963 /* English */,
+			);
+			name = OpenFolder.png;
+			sourceTree = "<group>";
+		};
+		EEEE5C702040152A0020337A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEEE5C712040152A0020337A /* English */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		EEEED082206BB81900A93BAA /* SlideshowWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEEED083206BB81900A93BAA /* English */,
+			);
+			name = SlideshowWindow.xib;
+			sourceTree = "<group>";
+		};
+		EEEF3FFD205FAD7E00B7AE90 /* QuickViewDHGR.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEEF3FFE205FAD7E00B7AE90 /* English */,
+			);
+			name = QuickViewDHGR.icns;
+			sourceTree = "<group>";
+		};
+		EEF124E92B703A5E0020E58F /* Readme.rtfd */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEF124EA2B703A5E0020E58F /* English */,
+			);
+			name = Readme.rtfd;
+			sourceTree = "<group>";
+		};
+		EEFBC0082055FBE70071E684 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFBC0092055FBE70071E684 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		EEFF90692054924A00E00C26 /* DropImage.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFF906A2054924A00E00C26 /* English */,
+			);
+			name = DropImage.png;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuickViewDHGR_Prefix.pch;
+				INFOPLIST_FILE = "QuickViewDHGR-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QuickViewDHGR;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuickViewDHGR_Prefix.pch;
+				INFOPLIST_FILE = "QuickViewDHGR-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QuickViewDHGR;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QuickViewDHGR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuickViewDHGR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
